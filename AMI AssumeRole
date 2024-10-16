@@ -1,0 +1,13 @@
+* First we need to create IAM User with EC2 full Access and create CLI access key and download .csv file 
+*Create role with aws serives select ec2 and add a policy s3 full access and change trust relation 
+  "Principal": {  
+      AWS: "ARN OF IAM USER"
+    }
+*IN CLI 
+  aws congiure
+  aws sts assume-role --role-arn <enter the role arn> --role-session-name s3-access-example --duration-seconds 3600
+--> copy the accesskey secretkey and seeison token
+      set AWS_ACCESS_KEY_ID=<enter the copied access key>
+      set AWS_SECRET_ACCESS_KEY=<enter the copied session key>
+      set AWS_SESSION_TOKEN=<sessiontoken>
+  aws s3api list-buckets
