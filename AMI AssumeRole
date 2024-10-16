@@ -1,5 +1,5 @@
 * First we need to create IAM User with EC2 full Access and create CLI access key and download .csv file 
-*Create role with aws serives select ec2 and add a policy s3 full access and change trust relation 
+*Create role with aws serives select ec2 and add a policy s3 full access and change trustrelationship 
   "Principal": {  
       AWS: "ARN OF IAM USER"
     }
